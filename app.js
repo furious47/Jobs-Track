@@ -14,7 +14,7 @@ const xss = require('xss-clean');
 const ratelimiter = require('express-rate-limit')
 
 app.set('trust proxy', 1);
-app.use(rateLimiter({
+app.use(ratelimiter({
     windowMs: 15 * 60 * 1000, // 15 minutes
     max: 100, // limit each IP to 100 requests per windowMs
   })
