@@ -30,15 +30,17 @@ app.use(express.json());
 
 //routes
 
+app.get('/',(req,res)=>{
+  res.send('success da jumni')
+})
+
+
 app.use('/api/v1/auth',authRouter);
 app.use('/api/v1/jobs',authMiddleware,jobsRouter);
 
 app.use(errorHandler);
 app.use(notfound);
 
-app.get('/',(req,res)=>{
-  res.status(200).send('success da jumni')
-})
 
 
 
