@@ -8,7 +8,6 @@ const getalljobs = async (req,res)=>{
 }
 
 const createjob = async (req,res)=>{
-    // const {company,status,position} = req.body;
     req.body.createdBy = req.user.userId
     console.log(req.user.userId)
     const jobs = await job.create(req.body);

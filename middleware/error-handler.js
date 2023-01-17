@@ -1,4 +1,4 @@
-const {customApiEr} = require('../error')
+
 
 const errorHandler = (err,req,res,next)=>{
 

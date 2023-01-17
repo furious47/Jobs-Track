@@ -25,7 +25,6 @@ const login = async (req,res)=>{
     }
 
     const token = users.tokenCreate()
-    console.log(req.user);
 
     res.status(200).json({name:users.name,token})
 

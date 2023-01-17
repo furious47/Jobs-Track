@@ -31,7 +31,7 @@ app.use(express.json());
 //routes
 
 app.get('/',(req,res)=>{
-  res.send('success da jumni')
+  res.send('Base url')
 })
 
 
@@ -42,11 +42,6 @@ app.use(errorHandler);
 app.use(notfound);
 
 
-
-
-
-
-
 const port = process.env.PORT || 3000
 
 const start = async ()=>{
@@ -55,5 +50,4 @@ const start = async ()=>{
 }
 
 start();
-console.log(process.env.MONGO_URI)
 
